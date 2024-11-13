@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+    // MARK: - PROPERTIES
+
+    private let alternateAppIcons: [String] = [
+        "AppIcon-MagnifyingGlass",
+        "AppIcon-Map",
+        "AppIcon-Mushroom",
+        "AppIcon-Campfire",
+        "AppIcon-Backpack",
+        "AppIcon-Camera",
+    ]
+
     var body: some View {
         List {
             // MARK: - SECTION: HEADER
@@ -62,6 +73,36 @@ struct SettingsView: View {
 
             // MARK: - SECTION: ICONS
 
+            Section(header: Text("ALTERNATE ICONS")) {
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 12) {
+                        ForEach(alternateAppIcons.indices, id: \.self) { item in
+                            Button {
+                                print("Icon was pressed.")
+                            } label: {
+                                Image("\(alternateAppIcons[item])-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .cornerRadius(16)
+                            }
+                            .buttonStyle(.borderless)
+                        }
+                    }
+                }  //: SCROLL VIEW
+                .padding(.top, 12)
+
+                Text("Choose your favorite app icon form the collection above.")
+                    .frame(
+                        minWidth: /*@START_MENU_TOKEN@*/ 0 /*@END_MENU_TOKEN@*/,
+                        maxWidth: .infinity
+                    )
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.secondary)
+                    .font(.footnote)
+            }
+
             // MARK: - SECTION: ABOUT
 
             Section(
@@ -84,27 +125,28 @@ struct SettingsView: View {
                 CustomListRowView(
                     rowIcon: "apps.iphone", rowLabel: "Application", rowContent: "Hike",
                     rowTintColor: .blue)
-                
+
                 CustomListRowView(
                     rowIcon: "info.circle", rowLabel: "Compatibility", rowContent: "iOS, iPadOs",
                     rowTintColor: .red)
-                
+
                 CustomListRowView(
                     rowIcon: "swift", rowLabel: "Technology", rowContent: "Swift",
                     rowTintColor: .orange)
-                
+
                 CustomListRowView(
                     rowIcon: "gear", rowLabel: "Version", rowContent: "1.0",
                     rowTintColor: .purple)
-                
+
                 CustomListRowView(
-                    rowIcon: "ellipsis.curlybraces", rowLabel: "Developer", rowContent: "Alan Perez",
+                    rowIcon: "ellipsis.curlybraces", rowLabel: "Developer",
+                    rowContent: "Alan Perez",
                     rowTintColor: .mint)
-                
+
                 CustomListRowView(
                     rowIcon: "paintpalette", rowLabel: "Designer", rowContent: "Robert Petras",
                     rowTintColor: .pink)
-                
+
                 CustomListRowView(
                     rowIcon: "globe",
                     rowLabel: "Website",
