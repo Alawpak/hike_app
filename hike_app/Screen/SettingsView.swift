@@ -106,8 +106,12 @@ struct SettingsView: View {
                     rowTintColor: .pink)
                 
                 CustomListRowView(
-                    rowIcon: "globe", rowLabel: "Website", rowContent: "https://credo.academy",
-                    rowTintColor: .indigo)
+                    rowIcon: "globe",
+                    rowLabel: "Website",
+                    rowContent: nil,
+                    rowTintColor: .pink,
+                    rowLinkLabel: "Credo Academy",
+                    rowLinkDestination: "https://credo.academy")
 
             }  //: SECTION
 

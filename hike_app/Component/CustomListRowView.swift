@@ -12,14 +12,24 @@ struct CustomListRowView: View {
 
     @State var rowIcon: String
     @State var rowLabel: String
-    @State var rowContent: String
+    @State var rowContent: String? = nil
     @State var rowTintColor: Color
+    @State var rowLinkLabel: String? = nil
+    @State var rowLinkDestination: String? = nil
 
     var body: some View {
         LabeledContent {
-            Text(rowContent)
-                .foregroundStyle(.primary)
-                .fontWeight(.bold)
+            if rowContent != nil {
+                Text(rowContent!)
+                    .foregroundStyle(.primary)
+                    .fontWeight(.bold)
+            } else if rowLinkLabel != nil && rowLinkDestination != nil {
+                Link(rowLinkLabel!, destination: URL(string: rowLinkDestination!)!)
+                    .fontWeight(.bold)
+                    .foregroundColor(.pink)
+            } else {
+                EmptyView()
+            }
         } label: {
             HStack {
                 ZStack {
@@ -38,5 +48,10 @@ struct CustomListRowView: View {
 
 #Preview {
     CustomListRowView(
-        rowIcon: "paintpalette", rowLabel: "Designer", rowContent: "John Doe", rowTintColor: .pink)
+        rowIcon: "globe",
+        rowLabel: "Website",
+        rowContent: nil,
+        rowTintColor: .pink,
+        rowLinkLabel: "Credo Academy",
+        rowLinkDestination: "https://credo.academy")
 }
