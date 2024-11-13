@@ -14,6 +14,7 @@
 		B90711402CE40D6F008A8B41 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B907113F2CE40D6F008A8B41 /* CardView.swift */; };
 		B90711432CE40E0D008A8B41 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90711422CE40E0D008A8B41 /* CustomBackgroundView.swift */; };
 		B90711462CE4110A008A8B41 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90711452CE4110A008A8B41 /* ColorExtension.swift */; };
+		B90711482CE427FB008A8B41 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90711472CE427FB008A8B41 /* CustomButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B907113F2CE40D6F008A8B41 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B90711422CE40E0D008A8B41 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
 		B90711452CE4110A008A8B41 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		B90711472CE427FB008A8B41 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				B907113F2CE40D6F008A8B41 /* CardView.swift */,
 				B90711422CE40E0D008A8B41 /* CustomBackgroundView.swift */,
+				B90711472CE427FB008A8B41 /* CustomButtonView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				B90711342CE3EC69008A8B41 /* ContentView.swift in Sources */,
 				B90711402CE40D6F008A8B41 /* CardView.swift in Sources */,
 				B90711322CE3EC69008A8B41 /* hike_appApp.swift in Sources */,
+				B90711482CE427FB008A8B41 /* CustomButtonView.swift in Sources */,
 				B90711432CE40E0D008A8B41 /* CustomBackgroundView.swift in Sources */,
 				B90711462CE4110A008A8B41 /* ColorExtension.swift in Sources */,
 			);
