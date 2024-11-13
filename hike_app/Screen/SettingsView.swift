@@ -56,13 +56,60 @@ struct SettingsView: View {
                 }
                 .padding(.bottom, 16)
                 .multilineTextAlignment(.center)
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/ .infinity /*@END_MENU_TOKEN@*/)
             }  //: HEADER
             .listRowSeparator(.hidden)
 
             // MARK: - SECTION: ICONS
 
             // MARK: - SECTION: ABOUT
+
+            Section(
+                header: Text("ABOUT THE APP"),
+                footer: HStack {
+                    Spacer()
+
+                    Text("Copyright © All right reserved.")
+
+                    Spacer()
+                }
+                .padding(.vertical, 8)
+            ) {
+                // 1. Basic Labeled Content
+
+                // LabeledContent("Application", value: "Hike")
+
+                // 2. Advanced Labeled Content
+
+                CustomListRowView(
+                    rowIcon: "apps.iphone", rowLabel: "Application", rowContent: "Hike",
+                    rowTintColor: .blue)
+                
+                CustomListRowView(
+                    rowIcon: "info.circle", rowLabel: "Compatibility", rowContent: "iOS, iPadOs",
+                    rowTintColor: .red)
+                
+                CustomListRowView(
+                    rowIcon: "swift", rowLabel: "Technology", rowContent: "Swift",
+                    rowTintColor: .orange)
+                
+                CustomListRowView(
+                    rowIcon: "gear", rowLabel: "Version", rowContent: "1.0",
+                    rowTintColor: .purple)
+                
+                CustomListRowView(
+                    rowIcon: "ellipsis.curlybraces", rowLabel: "Developer", rowContent: "Alan Perez",
+                    rowTintColor: .mint)
+                
+                CustomListRowView(
+                    rowIcon: "paintpalette", rowLabel: "Designer", rowContent: "Robert Petras",
+                    rowTintColor: .pink)
+                
+                CustomListRowView(
+                    rowIcon: "globe", rowLabel: "Website", rowContent: "https://credo.academy",
+                    rowTintColor: .indigo)
+
+            }  //: SECTION
 
         }  //: LIST
     }
